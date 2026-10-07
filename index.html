@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>iPhone | Innovación que inspira</title>
+
+
+    <style>
+
+        /* =====================================================
+           PALETA DE COLORES
+        ===================================================== */
+
+        :root {
+
+            --azul: #4F8CFF;
+            --morado: #8B5CF6;
+            --rosa: #EC4899;
+
+            --fondo: #070B14;
+            --fondo-secundario: #0B1220;
+            --tarjeta: #111827;
+
+            --blanco: #F8FAFC;
+            --gris: #AAB3C5;
+
+            --borde: rgba(255,255,255,0.10);
+        }
+
+
+        /* =====================================================
+           CONFIGURACIÓN GENERAL
+        ===================================================== */
+
+        * {
+
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 20% 10%,
+                    rgba(79,140,255,0.18),
+                    transparent 25%
+                ),
+
+                radial-gradient(
+                    circle at 80% 15%,
+                    rgba(139,92,246,0.18),
+                    transparent 22%
+                ),
+
+                var(--fondo);
+
+            color: var(--blanco);
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+        }
+
+
+        img {
+
+            width: 100%;
+
+            display: block;
+        }
+
+
+        /* =====================================================
+           BARRA DE NAVEGACIÓN
+        ===================================================== */
+
+        nav {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(7, 11, 20, 0.82);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom:
+                1px solid var(--borde);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 14px 20px;
+        }
+
+
+        nav .logo {
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            margin-right: 25px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--azul),
+                    var(--morado),
+                    var(--rosa)
+                );
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            color: transparent;
+        }
+
+
+        nav a {
+
+            color: var(--gris);
+
+            padding: 9px 15px;
+
+            border-radius: 20px;
+
+            transition: 0.3s ease;
+        }
+
+
+        nav a:hover {
+
+            color: var(--blanco);
+
+            background:
+                rgba(255,255,255,0.08);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =====================================================
+           ENCABEZADO
+        ===================================================== */
+
+        header {
+
+            min-height: 620px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 70px 20px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        header::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 430px;
+
+            height: 430px;
+
+            border-radius: 50%;
+
+            background: var(--azul);
+
+            filter: blur(120px);
+
+            opacity: 0.20;
+
+            top: 30px;
+
+            left: -140px;
+        }
+
+
+        header::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 390px;
+
+            height: 390px;
+
+            border-radius: 50%;
+
+            background: var(--rosa);
+
+            filter: blur(130px);
+
+            opacity: 0.16;
+
+            right: -130px;
+
+            bottom: 10px;
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 1050px;
+        }
+
+
+        .etiqueta {
+
+            display: inline-block;
+
+            padding: 8px 15px;
+
+            margin-bottom: 20px;
+
+            border-radius: 50px;
+
+            border:
+                1px solid var(--borde);
+
+            background:
+                rgba(255,255,255,0.05);
+
+            color: #DCE7FF;
+
+            font-size: 14px;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        header h1 {
+
+            font-size:
+                clamp(55px, 10vw, 115px);
+
+            line-height: 0.95;
+
+            margin-bottom: 25px;
+
+            letter-spacing: -4px;
+
+            background:
+
+                linear-gradient(
+                    100deg,
+                    #FFFFFF 5%,
+                    #A9C8FF 40%,
+                    #9B7BFF 70%,
+                    #F09AC8 100%
+                );
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            color: transparent;
+        }
+
+
+        /* =====================================================
+           IMAGEN DEL INICIO
+        ===================================================== */
+
+        .imagen-inicio {
+
+            width:
+                min(700px, 100%);
+
+            height: 280px;
+
+            object-fit: cover;
+
+            margin:
+                25px auto 30px;
+
+            border-radius: 28px;
+
+            border:
+                1px solid rgba(255,255,255,0.12);
+
+            box-shadow:
+                0 25px 60px
+                rgba(0,0,0,0.35);
+        }
+
+
+        header p {
+
+            max-width: 720px;
+
+            margin: auto;
+
+            color: var(--gris);
+
+            font-size: 20px;
+        }
+
+
+        /* =====================================================
+           BOTONES
+        ===================================================== */
+
+        .hero-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 30px;
+        }
+
+
+        .boton {
+
+            display: inline-block;
+
+            padding: 13px 22px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            transition: 0.3s ease;
+        }
+
+
+        .boton-principal {
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    var(--azul),
+                    var(--morado)
+                );
+
+            box-shadow:
+                0 12px 30px
+                rgba(79,140,255,0.25);
+        }
+
+
+        .boton-secundario {
+
+            color: white;
+
+            background:
+                rgba(255,255,255,0.06);
+
+            border:
+                1px solid var(--borde);
+        }
+
+
+        .boton:hover {
+
+            transform:
+                translateY(-3px)
+                scale(1.02);
+        }
+
+
+        /* =====================================================
+           CUERPO
+        ===================================================== */
+
+        main {
+
+            width:
+                min(1150px, 92%);
+
+            margin: auto;
+        }
+
+
+        section {
+
+            margin-bottom: 35px;
+        }
+
+
+        .bloque {
+
+            padding: 55px;
+
+            border-radius: 28px;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.07),
+                    rgba(255,255,255,0.025)
+                );
+
+            border:
+                1px solid var(--borde);
+
+            box-shadow:
+                0 20px 70px
+                rgba(0,0,0,0.20);
+        }
+
+
+        .titulo-seccion {
+
+            margin-bottom: 12px;
+
+            font-size: 40px;
+
+            letter-spacing: -1px;
+        }
+
+
+        .subtitulo {
+
+            color: var(--gris);
+
+            margin-bottom: 28px;
+        }
+
+
+        /* =====================================================
+           TARJETAS DE MODELOS
+        ===================================================== */
+
+        .tarjetas {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .tarjeta {
+
+            overflow: hidden;
+
+            border-radius: 22px;
+
+            background: var(--tarjeta);
+
+            border:
+                1px solid var(--borde);
+
+            transition:
+                0.35s ease;
+        }
+
+
+        .tarjeta:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                0 20px 50px
+                rgba(0,0,0,0.30);
+        }
+
+
+        .tarjeta img {
+
+            height: 250px;
+
+            object-fit: cover;
+
+            transition:
+                0.5s ease;
+        }
+
+
+        .tarjeta:hover img {
+
+            transform:
+                scale(1.04);
+        }
+
+
+        .tarjeta-contenido {
+
+            padding: 23px;
+        }
+
+
+        .tarjeta h3 {
+
+            font-size: 27px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .tarjeta p {
+
+            color: var(--gris);
+
+            margin-bottom: 15px;
+        }
+
+
+        .enlace {
+
+            color: #9DC1FF;
+
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           CARACTERÍSTICAS
+        ===================================================== */
+
+        .caracteristicas {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+
+        .caracteristica {
+
+            padding: 25px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,0.04);
+
+            border:
+                1px solid var(--borde);
+        }
+
+
+        .icono {
+
+            font-size: 32px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .caracteristica h3 {
+
+            margin-bottom: 8px;
+        }
+
+
+        .caracteristica p {
+
+            color: var(--gris);
+
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           BANNER VISUAL
+        ===================================================== */
+
+        .banner {
+
+            position: relative;
+
+            min-height: 420px;
+
+            padding: 45px;
+
+            border-radius: 28px;
+
+            overflow: hidden;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            background-image:
+
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,0.85),
+                    rgba(0,0,0,0.10)
+                ),
+
+                url(
+                    "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&q=85"
+                );
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+        .banner-text {
+
+            max-width: 620px;
+        }
+
+
+        .banner h2 {
+
+            font-size: 46px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .banner p {
+
+            color: #DFE4EC;
+        }
+
+
+        /* =====================================================
+           FORMULARIO
+        ===================================================== */
+
+        .formulario {
+
+            max-width: 800px;
+
+            margin: auto;
+        }
+
+
+        .fila {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 15px;
+        }
+
+
+        .campo {
+
+            margin-bottom: 18px;
+        }
+
+
+        label {
+
+            display: block;
+
+            font-weight: bold;
+
+            margin-bottom: 7px;
+        }
+
+
+        input,
+        select,
+        textarea {
+
+            width: 100%;
+
+            padding: 13px 14px;
+
+            border-radius: 12px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.12);
+
+            background: #0A0F19;
+
+            color: white;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size: 15px;
+
+            outline: none;
+
+            transition: 0.3s ease;
+        }
+
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+
+            border-color: var(--azul);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(79,140,255,0.12);
+        }
+
+
+        textarea {
+
+            min-height: 140px;
+
+            resize: vertical;
+        }
+
+
+        .boton-enviar {
+
+            width: 100%;
+
+            padding: 15px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            background:
+
+                linear-gradient(
+                    100deg,
+                    var(--azul),
+                    var(--morado),
+                    var(--rosa)
+                );
+
+            transition: 0.3s ease;
+        }
+
+
+        .boton-enviar:hover {
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0 15px 30px
+                rgba(139,92,246,0.25);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            margin-top: 45px;
+
+            padding: 35px 20px;
+
+            text-align: center;
+
+            color: var(--gris);
+
+            border-top:
+                1px solid var(--borde);
+
+            background: #050812;
+        }
+
+
+        footer strong {
+
+            color: white;
+        }
+
+
+        /* =====================================================
+           ANIMACIONES
+        ===================================================== */
+
+        .animar {
+
+            animation:
+                aparecer
+                0.9s ease both;
+        }
+
+
+        .retraso-1 {
+
+            animation-delay:
+                0.15s;
+        }
+
+
+        .retraso-2 {
+
+            animation-delay:
+                0.30s;
+        }
+
+
+        .retraso-3 {
+
+            animation-delay:
+                0.45s;
+        }
+
+
+        @keyframes aparecer {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(25px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            nav {
+
+                flex-wrap: wrap;
+            }
+
+
+            nav .logo {
+
+                width: 100%;
+
+                text-align: center;
+
+                margin-right: 0;
+            }
+
+
+            .tarjetas {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .caracteristicas {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .bloque {
+
+                padding:
+                    35px 25px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+
+                min-height:
+                    560px;
+            }
+
+
+            header h1 {
+
+                font-size:
+                    58px;
+
+                letter-spacing:
+                    -2px;
+            }
+
+
+            header p {
+
+                font-size:
+                    17px;
+            }
+
+
+            .titulo-seccion {
+
+                font-size:
+                    32px;
+            }
+
+
+            .caracteristicas,
+            .fila {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .banner {
+
+                min-height:
+                    360px;
+
+                padding:
+                    25px;
+            }
+
+
+            .banner h2 {
+
+                font-size:
+                    34px;
+            }
+
+
+            .imagen-inicio {
+
+                height:
+                    220px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         BARRA DE NAVEGACIÓN
+    ====================================================== -->
+
+    <nav>
+
+        <div class="logo">
+            iPhone
+        </div>
+
+        <a href="#inicio">
+            Inicio
+        </a>
+
+        <a href="#modelos">
+            Modelos
+        </a>
+
+        <a href="#caracteristicas">
+            Características
+        </a>
+
+        <a href="#contacto">
+            Contacto
+        </a>
+
+    </nav>
+
+
+    <!-- =====================================================
+         ENCABEZADO
+    ===================================================== -->
+
+    <header id="inicio">
+
+        <div class="hero-content">
+
+            <span class="etiqueta animar">
+
+                Tecnología · Innovación · Diseño
+
+            </span>
+
+
+            <h1 class="animar retraso-1">
+
+                iPhone
+
+            </h1>
+
+
+            <!-- IMAGEN AGREGADA EN EL INICIO -->
+
+            <img
+                class="imagen-inicio animar retraso-2"
+                src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=1400&q=85"
+                alt="Smartphone moderno representando el iPhone"
+            >
+
+
+            <p class="animar retraso-2">
+
+                Una experiencia diseñada para combinar
+                potencia, creatividad y estilo en un solo dispositivo.
+
+            </p>
+
+
+            <div class="hero-buttons animar retraso-3">
+
+                <a
+                    href="#modelos"
+                    class="boton boton-principal"
+                >
+
+                    Explorar modelos
+
+                </a>
+
+
+                <a
+                    href="#contacto"
+                    class="boton boton-secundario"
+                >
+
+                    Solicitar información
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CUERPO
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             CATÁLOGO DE 10 MODELOS
+        ================================================== -->
+
+        <section
+            id="modelos"
+            class="bloque"
+        >
+
+            <h2 class="titulo-seccion">
+
+                Encuentra tu estilo.
+
+            </h2>
+
+
+            <p class="subtitulo">
+
+                Explora nuestro catálogo de modelos de iPhone
+                y descubre cuál se adapta mejor a tus necesidades.
+
+            </p>
+
+
+            <div class="tarjetas">
+
+
+                <!-- 1 -->
+
+                <article class="tarjeta">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=1000&q=85"
+                        alt="iPhone 17 Pro Max"
+                    >
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>
+                            iPhone 17 Pro Max
+                        </h3>
+
+                        <p>
+                            Máximo tamaño y rendimiento para
+                            quienes buscan una experiencia premium.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="enlace"
+                        >
+                            Me interesa →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 2 -->
+
+                <article class="tarjeta">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=1000&q=85"
+                        alt="iPhone 17 Pro"
+                    >
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>
+                            iPhone 17 Pro
+                        </h3>
+
+                        <p>
+                            Rendimiento avanzado y una propuesta
+                            enfocada en fotografía y video.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="enlace"
+                        >
+                            Me interesa →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 3 -->
+
+                <article class="tarjeta">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=1000&q=85"
+                        alt="iPhone Air"
+                    >
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>
+                            iPhone Air
+                        </h3>
+
+                        <p>
+                            Un enfoque ligero y moderno para
+                            quienes buscan movilidad.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="enlace"
+                        >
+                            Me interesa →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 4 -->
+
+                <article class="tarjeta">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1000&q=85"
+                        alt="iPhone 17"
+                    >
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>
+                            iPhone 17
+                        </h3>
+
+                        <p>
+                            Una opción equilibrada para rendimiento,
+                            fotografía y uso diario.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="enlace"
+                        >
+                            Me interesa →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 5 -->
+
+                <article class="tarjeta">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=1000&q=85"
+                        alt="iPhone 16 Pro Max"
+                    >
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>
+                            iPhone 16 Pro Max
+                        </h3>
+
+                        <p>
+                            Gran pantalla, potencia y herramientas
+                            avanzadas para usuarios exigentes.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="enlace"
+                        >
+                            Me interesa →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 6 -->
+
+                <article class="tarjeta">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1592286927505-2fd2e29a0b16?auto=format&fit=crop&w=1000&q=85"
+                        alt="iPhone 16 Pro"
+                    >
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>
+                            iPhone 16 Pro
+                        </h3>
+
+                        <p>
+                            Diseño profesional y funciones pensadas
+                            para crear contenido.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="enlace"
+                        >
+                            Me interesa →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 7 -->
+
+                <article class="tarjeta">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1000&q=85"
+                        alt="iPhone 16 Plus"
+                    >
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>
+                            iPhone 16 Plus
+                        </h3>
+
+                        <p>
+                            Una experiencia amplia para quienes
+                            prefieren una pantalla de mayor tamaño.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="enlace"
+                        >
+                            Me interesa →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 8 -->
+
+                <article class="tarjeta">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1000&q=85"
+                        alt="iPhone 16"
+                    >
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>
+                            iPhone 16
+                        </h3>
+
+                        <p>
+                            Rendimiento equilibrado para comunicación,
+                            entretenimiento y fotografía.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="enlace"
+                        >
+                            Me interesa →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 9 -->
+
+                <article class="tarjeta">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1533228100845-08145b01de14?auto=format&fit=crop&w=1000&q=85"
+                        alt="iPhone 15"
+                    >
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>
+                            iPhone 15
+                        </h3>
+
+                        <p>
+                            Un modelo moderno con un equilibrio
+                            entre diseño y rendimiento.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="enlace"
+                        >
+                            Me interesa →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 10 -->
+
+                <article class="tarjeta">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=1000&q=85"
+                        alt="iPhone 15 Plus"
+                    >
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>
+                            iPhone 15 Plus
+                        </h3>
+
+                        <p>
+                            Una pantalla amplia y una experiencia
+                            cómoda para el entretenimiento.
+                        </p>
+
+                        <a
+                            href="#contacto"
+                            class="enlace"
+                        >
+                            Me interesa →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CARACTERÍSTICAS
+        ================================================== -->
+
+        <section
+            id="caracteristicas"
+            class="bloque"
+        >
+
+            <h2 class="titulo-seccion">
+
+                Tecnología que se nota.
+
+            </h2>
+
+
+            <p class="subtitulo">
+
+                Algunos de los elementos que hacen atractivo
+                un smartphone moderno.
+
+            </p>
+
+
+            <div class="caracteristicas">
+
+
+                <div class="caracteristica">
+
+                    <div class="icono">
+                        📱
+                    </div>
+
+                    <h3>
+                        Diseño
+                    </h3>
+
+                    <p>
+
+                        Una apariencia moderna y materiales
+                        pensados para una experiencia cómoda.
+
+                    </p>
+
+                </div>
+
+
+                <div class="caracteristica">
+
+                    <div class="icono">
+                        📷
+                    </div>
+
+                    <h3>
+                        Cámara
+                    </h3>
+
+                    <p>
+
+                        Herramientas para fotografía y video
+                        en diferentes situaciones.
+
+                    </p>
+
+                </div>
+
+
+                <div class="caracteristica">
+
+                    <div class="icono">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Rendimiento
+                    </h3>
+
+                    <p>
+
+                        Potencia para aplicaciones, juegos,
+                        comunicación y entretenimiento.
+
+                    </p>
+
+                </div>
+
+
+                <div class="caracteristica">
+
+                    <div class="icono">
+                        🔒
+                    </div>
+
+                    <h3>
+                        Seguridad
+                    </h3>
+
+                    <p>
+
+                        Funciones de seguridad y privacidad
+                        integradas en el dispositivo.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BANNER VISUAL
+        ================================================== -->
+
+        <section>
+
+            <div class="banner">
+
+                <div class="banner-text">
+
+                    <h2>
+
+                        Tecnología que inspira.
+
+                    </h2>
+
+
+                    <p>
+
+                        Un diseño visual pensado para que
+                        el sitio destaque desde el primer momento.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FORMULARIO
+        ================================================== -->
+
+        <section
+            id="contacto"
+            class="bloque"
+        >
+
+            <div class="formulario">
+
+                <h2 class="titulo-seccion">
+
+                    Solicita información
+
+                </h2>
+
+
+                <p class="subtitulo">
+
+                    Completa el formulario para conocer
+                    más sobre el modelo que te interesa.
+
+                </p>
+
+
+                <form>
+
+
+                    <div class="fila">
+
+
+                        <div class="campo">
+
+                            <label for="nombre">
+
+                                Nombre completo
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Escribe tu nombre"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="correo">
+
+                                Correo electrónico
+
+                            </label>
+
+
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                placeholder="ejemplo@correo.com"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="fila">
+
+
+                        <div class="campo">
+
+                            <label for="modelo">
+
+                                Modelo de interés
+
+                            </label>
+
+
+                            <select
+                                id="modelo"
+                                name="modelo"
+                                required
+                            >
+
+                                <option value="">
+
+                                    Selecciona un modelo
+
+                                </option>
+
+
+                                <option value="iphone-17-pro-max">
+
+                                    iPhone 17 Pro Max
+
+                                </option>
+
+
+                                <option value="iphone-17-pro">
+
+                                    iPhone 17 Pro
+
+                                </option>
+
+
+                                <option value="iphone-air">
+
+                                    iPhone Air
+
+                                </option>
+
+
+                                <option value="iphone-17">
+
+                                    iPhone 17
+
+                                </option>
+
+
+                                <option value="iphone-16-pro-max">
+
+                                    iPhone 16 Pro Max
+
+                                </option>
+
+
+                                <option value="iphone-16-pro">
+
+                                    iPhone 16 Pro
+
+                                </option>
+
+
+                                <option value="iphone-16-plus">
+
+                                    iPhone 16 Plus
+
+                                </option>
+
+
+                                <option value="iphone-16">
+
+                                    iPhone 16
+
+                                </option>
+
+
+                                <option value="iphone-15">
+
+                                    iPhone 15
+
+                                </option>
+
+
+                                <option value="iphone-15-plus">
+
+                                    iPhone 15 Plus
+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="capacidad">
+
+                                Almacenamiento
+
+                            </label>
+
+
+                            <select
+                                id="capacidad"
+                                name="capacidad"
+                            >
+
+                                <option value="128 GB">
+
+                                    128 GB
+
+                                </option>
+
+
+                                <option value="256 GB">
+
+                                    256 GB
+
+                                </option>
+
+
+                                <option value="512 GB">
+
+                                    512 GB
+
+                                </option>
+
+
+                                <option value="1 TB">
+
+                                    1 TB
+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="mensaje">
+
+                            Mensaje
+
+                        </label>
+
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            placeholder="Escribe aquí tu pregunta o solicitud..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="boton-enviar"
+                    >
+
+                        Enviar solicitud
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+
+            <strong>Oscar Daniel Montoya Resendis 0876</strong>
+            Listo maestra,Ud sabe q si use chatgpt pero entiendo el 70%
+
+        </p>
+
+
+        <p>
+
+            Estructura de Pagina Web:Iphone
+
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
